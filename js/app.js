@@ -8,7 +8,8 @@
 	}
 
 	var clickDown = function() {
-		audio.load();
+		audio.pause();
+		audio.currentTime = 0;
 		audio.play();
 	}
 
