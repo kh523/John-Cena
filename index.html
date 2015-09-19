@@ -1,12 +1,13 @@
 <DOCTYPE! html>
-<html ng-app="johnCenaApp"><head>
-	<script src="../node_modules/angular/angular.js"></script>
-	<script src="../node_modules/angular/angular-ui-router.min.js"></script>
+<html><head>
 	<script src="js/app.js"></script>
 	<link href="styles/style.css" rel="stylesheet">
 </head>
-<body>
-	<div ui-view></div>
+<body onload="imageSize();">
+	<div class="center">
+		<img id="buttonUp" src = "img/button unpressed.png" onmousedown="clickDown();" onmouseup="clickUp();" onmouseleave="clickUp();">
+		<img id="buttonDown" src = "img/button pressed.png" style="display:none;">
+	</div>
 
 </body>
 </html>

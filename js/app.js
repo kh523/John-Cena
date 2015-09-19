@@ -1,34 +1,24 @@
-var johnCenaApp = angular.module('johnCenaApp',['ui.router']);
 
-johnCenaApp.controller('AudioController', function($scope) {
-	
 	var audio = new Audio('/johncenashort.mp3');
 
-	$scope.playJohnCena = function() {
+	var imageSize = function() {
+		document.getElementById("buttonUp").style.width = Math.min(window.innerHeight, window.innerWidth);
+		document.getElementById("buttonUp").style.height = Math.min(window.innerHeight, window.innerWidth);
+		document.getElementById("buttonDown").style.width = Math.min(window.innerHeight, window.innerWidth);
+		document.getElementById("buttonDown").style.height = Math.min(window.innerHeight, window.innerWidth);
+
+	}
+
+	var clickDown = function() {
 		audio.load();
 		audio.play();
+		document.getElementById("buttonUp").style.display = "none";
+		document.getElementById("buttonDown").style.display = "block";
 	}
 
-
-	$scope.clickDown = function() {
-		$scope.buttonImageURL = "img/button pressed.png";
+	var clickUp = function() {
+		document.getElementById("buttonUp").style.display = "block";
+		document.getElementById("buttonDown").style.display = "none";
 	}
 
-	$scope.clickUp = function() {
-		$scope.buttonImageURL = "img/button unpressed.png";
-	}
-
-	$scope.buttonImageURL = "img/button unpressed.png";
 	
-});
-
-johnCenaApp.config(function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/");
-
-		$stateProvider
-			.state('button', {
-				url: '/',
-				templateUrl: 'partials/button.html',
-				controller: 'AudioController'
-			})
-});
