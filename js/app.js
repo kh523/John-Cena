@@ -1,12 +1,14 @@
 var johnCenaApp = angular.module('johnCenaApp',['ui.router']);
 
 johnCenaApp.controller('AudioController', function($scope) {
+	/*
 	var audio = new Audio('/johncenaedited.mp3');
 
 	$scope.playJohnCena = function() {
 		audio.load();
 		audio.play();
 	}
+	*/
 
 	$scope.clickDown = function() {
 		$scope.buttonImageURL = "img/button pressed.png";
