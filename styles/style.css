@@ -5,6 +5,6 @@ div .center {
 }
 
 img {
-	width: 80%;
-	height: auto;
+    display: table-caption;
+    margin: 0 auto;
 }
