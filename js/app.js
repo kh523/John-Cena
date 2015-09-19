@@ -7,15 +7,25 @@ johnCenaApp.controller('AudioController', function($scope) {
 		audio.load();
 		audio.play();
 	}
+
+	$scope.clickDown = function() {
+		$scope.buttonImageURL = "img/button pressed.png";
+	}
+
+	$scope.clickUp = function() {
+		$scope.buttonImageURL = "img/button unpressed.png";
+	}
+
+	$scope.buttonImageURL = "img/button unpressed.png";
 	
 });
 
 johnCenaApp.config(function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/button");
+		$urlRouterProvider.otherwise("/");
 
 		$stateProvider
 			.state('button', {
-				url: '/button',
+				url: '/',
 				templateUrl: 'partials/button.html',
 				controller: 'AudioController'
 			})
