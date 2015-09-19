@@ -2,10 +2,10 @@
   "name": "john-cena",
   "version": "1.0.0",
   "description": "HIS NAME IS JOHN CENAAAA",
-  "main": "server.js",
+  "main": "app/server.js",
   "scripts": {
     "test": "test",
-    "start": "node server.js"
+    "start": "node app/server.js"
   },
   "repository": {
     "type": "git",
