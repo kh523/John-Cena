@@ -31,7 +31,7 @@ var updateCounter = function() {
 
 myDataRef.on('child_changed', function(childSnapshot, prevChildKey) {
 	totalclicks = childSnapshot.val();
-	updateCounter;
+	updateCounter();
 });
 
 
